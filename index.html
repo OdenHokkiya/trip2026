@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Birthday Trip 2026 🇻🇳🇰🇷</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --coral:#FF8B6A; --sky:#7EC8E3; --mint:#A8D8B9; --peach:#FFD4C2;
+  --sand:#FFF8F4; --lav:#C9B8FF; --yellow:#FFE066; --white:#FFFFFF;
+  --dark:#3D2B1F; --mid:#8A6A5F; --light:#F5EDE8;
+  --vn:#E8252A; --kr:#4A90D9; --kr-pink:#FF6B9D;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Zen Maru Gothic','Noto Sans JP',sans-serif;background:var(--sand);color:var(--dark);overflow-x:hidden;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#7EC8E3 0%,#A8D8B9 35%,#FFD4C2 65%,#FF8B6A 100%);padding:56px 20px 72px;text-align:center;position:relative;overflow:hidden;}
+.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,0.12);}
+.hero::before{width:220px;height:220px;top:-70px;left:-60px;}
+.hero::after{width:280px;height:280px;bottom:-100px;right:-60px;}
+.hero-emoji{font-size:44px;display:block;margin-bottom:10px;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.hero-title{font-family:'Pacifico',cursive;font-size:clamp(30px,8vw,54px);color:#fff;text-shadow:2px 4px 0 rgba(0,0,0,0.1);line-height:1.25;margin-bottom:8px;position:relative;z-index:1;}
+.hero-sub{font-size:clamp(14px,3.5vw,18px);color:rgba(255,255,255,0.92);font-weight:700;margin-bottom:18px;position:relative;z-index:1;letter-spacing:.04em;}
+.birthday-badges{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;position:relative;z-index:1;margin-bottom:16px;}
+.b-badge{background:#fff;border-radius:24px;padding:7px 16px;font-size:13px;font-weight:700;box-shadow:0 3px 10px rgba(0,0,0,0.12);}
+.b-badge span{color:var(--coral);}
+
+/* MEMBERS */
+.members{background:#fff;padding:28px 20px;text-align:center;border-bottom:3px dashed var(--peach);}
+.sec-label{font-size:12px;font-weight:700;color:var(--mid);letter-spacing:.15em;text-transform:uppercase;margin-bottom:14px;}
+.member-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.member-card{background:linear-gradient(135deg,var(--peach),var(--lav));border-radius:16px;padding:12px 18px;min-width:100px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+.member-emoji{font-size:28px;display:block;margin-bottom:4px;}
+.member-name{font-size:14px;font-weight:700;}
+.member-role{font-size:11px;color:var(--mid);margin-top:2px;}
+
+/* NAV */
+nav{background:#fff;position:sticky;top:0;z-index:100;padding:10px 14px;display:flex;gap:8px;overflow-x:auto;border-bottom:2px solid var(--peach);scrollbar-width:none;}
+nav::-webkit-scrollbar{display:none;}
+nav a{text-decoration:none;white-space:nowrap;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;color:var(--mid);background:var(--light);transition:all .2s;}
+nav a:hover,nav a.active{background:var(--coral);color:#fff;}
+
+/* COUNTRY HEADER */
+.country-header{text-align:center;padding:36px 20px 8px;}
+.country-flag{font-size:50px;display:block;margin-bottom:6px;}
+.country-name{font-family:'Pacifico',cursive;font-size:clamp(22px,6vw,38px);margin-bottom:4px;}
+.country-name.vn{color:var(--vn);}
+.country-name.kr{color:var(--kr);}
+.country-dates{font-size:13px;color:var(--mid);}
+
+/* DAY SECTION */
+.day-section{padding:16px 14px 8px;max-width:680px;margin:0 auto;}
+.day-header{display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;color:#fff;font-weight:700;margin-bottom:14px;}
+.day-header.c-danang{background:linear-gradient(135deg,#7EC8E3,#4AAFCF);}
+.day-header.c-hoian{background:linear-gradient(135deg,#FFB347,#FF8B6A);}
+.day-header.c-transit{background:linear-gradient(135deg,#A8D8B9,#6BBFA0);}
+.day-header.c-seoul{background:linear-gradient(135deg,#FF6B9D,#C94F85);}
+.day-header.c-dep{background:linear-gradient(135deg,#C9B8FF,#9B87F5);}
+.day-lbl{background:rgba(255,255,255,.25);border-radius:8px;padding:3px 10px;font-size:11px;}
+.day-ttl{font-size:16px;}
+.day-dt{font-size:12px;opacity:.85;margin-left:auto;}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:18px;}
+.timeline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:repeating-linear-gradient(to bottom,var(--peach) 0,var(--peach) 6px,transparent 6px,transparent 12px);}
+.tl-item{position:relative;margin-bottom:10px;padding-left:18px;}
+.tl-item::before{content:'';position:absolute;left:-5px;top:6px;width:10px;height:10px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--coral);background:var(--coral);}
+.tl-item.t-flight::before{background:var(--sky);box-shadow:0 0 0 2px var(--sky);}
+.tl-item.t-food::before{background:var(--yellow);box-shadow:0 0 0 2px var(--yellow);}
+.tl-item.t-hotel::before{background:var(--mint);box-shadow:0 0 0 2px var(--mint);}
+.tl-item.t-shop::before{background:var(--lav);box-shadow:0 0 0 2px var(--lav);}
+.tl-item.t-sleep::before{background:#B0C4DE;box-shadow:0 0 0 2px #B0C4DE;}
+.tl-time{font-size:10px;font-weight:700;color:var(--mid);margin-bottom:2px;}
+.tl-box{background:#fff;border-radius:12px;padding:10px 13px;font-size:13px;font-weight:500;line-height:1.65;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+.tl-box strong{color:var(--coral);}
+.f-info{font-family:monospace;font-size:11px;background:var(--light);padding:6px 10px;border-radius:8px;margin-top:6px;color:var(--mid);line-height:1.9;}
+.tip{font-size:11px;color:var(--mid);margin-top:5px;padding-left:6px;border-left:3px solid var(--peach);line-height:1.6;}
+.alert{background:#FFF3CD;border:2px solid #FFD966;border-radius:8px;padding:7px 11px;font-size:12px;font-weight:700;margin-top:6px;color:#856404;}
+
+/* PLACE CARDS (spot detail) */
+.spots-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:4px 14px 16px;max-width:680px;margin:0 auto;}
+.spot-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.07);cursor:pointer;transition:transform .2s;}
+.spot-card:hover{transform:translateY(-3px);}
+.spot-card-top{height:120px;overflow:hidden;position:relative;}.spot-card-top img{width:100%;height:100%;object-fit:cover;display:block;}.spot-card-top .card-emoji{position:absolute;bottom:6px;right:8px;font-size:22px;background:rgba(255,255,255,.8);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;}
+.spot-card-body{padding:10px 12px 12px;}
+.spot-card-name{font-size:13px;font-weight:700;margin-bottom:3px;}
+.spot-card-desc{font-size:11px;color:var(--mid);line-height:1.5;margin-bottom:8px;}
+.map-btn{display:flex;align-items:center;gap:5px;background:var(--light);border:none;border-radius:20px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--dark);cursor:pointer;text-decoration:none;width:100%;}
+.map-btn:hover{background:var(--coral);color:#fff;}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;align-items:flex-end;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;padding:24px 20px 40px;}
+.modal-handle{width:40px;height:4px;background:#ddd;border-radius:2px;margin:0 auto 16px;}
+.modal-icon{font-size:40px;text-align:center;margin-bottom:8px;}
+.modal-title{font-size:20px;font-weight:700;text-align:center;margin-bottom:4px;}
+.modal-cat{text-align:center;font-size:12px;color:var(--mid);margin-bottom:16px;}
+.modal-body{font-size:14px;line-height:1.8;color:var(--dark);}
+.modal-body ul{padding-left:18px;margin-top:4px;}
+.modal-body li{margin-bottom:4px;}
+.modal-map-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--coral);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;margin-top:16px;width:100%;text-decoration:none;}
+.modal-close{position:absolute;top:16px;right:16px;background:var(--light);border:none;border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.modal{position:relative;}
+.modal-divider{height:1px;background:var(--peach);margin:14px 0;}
+.info-row{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start;}
+.info-row-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.info-row-text{font-size:13px;line-height:1.6;}
+
+/* SHOP GRID */
+.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:4px 14px 16px;max-width:680px;margin:0 auto;}
+.shop-card{background:#fff;border-radius:14px;padding:14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);cursor:pointer;transition:transform .2s;}
+.shop-card:hover{transform:translateY(-2px);}
+.shop-top{display:flex;gap:8px;align-items:center;margin-bottom:6px;}
+.shop-emoji{font-size:26px;}
+.shop-name{font-size:13px;font-weight:700;line-height:1.3;}
+.shop-desc{font-size:11px;color:var(--mid);line-height:1.55;margin-bottom:8px;}
+.shop-map-btn{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--kr);text-decoration:none;background:none;border:none;cursor:pointer;padding:0;}
+
+/* SECTION TITLE */
+.section-title{text-align:center;font-size:13px;font-weight:700;color:var(--mid);letter-spacing:.12em;padding:8px 0 4px;}
+
+/* PACKING */
+.packing-section{background:#fff;margin:8px 14px 16px;border-radius:20px;padding:22px;max-width:652px;margin-left:auto;margin-right:auto;box-shadow:0 4px 16px rgba(0,0,0,0.06);}
+.packing-title{font-family:'Pacifico',cursive;font-size:20px;color:var(--coral);margin-bottom:18px;text-align:center;}
+.pack-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.pack-group-ttl{font-size:12px;font-weight:700;color:var(--mid);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.pack-item{display:flex;align-items:center;gap:7px;font-size:12px;margin-bottom:7px;cursor:pointer;user-select:none;}
+.pack-check{width:17px;height:17px;border:2px solid var(--peach);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s;font-size:10px;}
+.pack-item.checked .pack-check{background:var(--coral);border-color:var(--coral);color:#fff;}
+.pack-item.checked span{text-decoration:line-through;color:var(--mid);}
+
+/* NEXT TRIP */
+.next-trip{background:linear-gradient(135deg,#C9B8FF22,#FF6B9D18);border:2px dashed var(--lav);border-radius:20px;padding:22px;margin:8px 14px 20px;max-width:652px;margin-left:auto;margin-right:auto;}
+.next-title{font-family:'Pacifico',cursive;font-size:18px;color:var(--lav);margin-bottom:14px;text-align:center;}
+.wish-item{display:flex;align-items:flex-start;gap:10px;background:#fff;border-radius:12px;padding:11px 13px;margin-bottom:8px;font-size:13px;line-height:1.6;box-shadow:0 2px 6px rgba(0,0,0,0.05);}
+.wish-icon{font-size:18px;flex-shrink:0;}
+
+/* FLIGHT SUMMARY */
+.flight-summary{background:#fff;margin:8px 14px 0;border-radius:16px;overflow:hidden;max-width:652px;margin-left:auto;margin-right:auto;box-shadow:0 3px 12px rgba(0,0,0,0.06);}
+.fs-header{background:linear-gradient(135deg,var(--sky),#4AAFCF);color:#fff;padding:12px 16px;font-weight:700;font-size:14px;}
+.fs-item{padding:12px 16px;border-bottom:1px solid var(--light);font-size:13px;}
+.fs-item:last-child{border-bottom:none;}
+.fs-who{font-weight:700;margin-bottom:2px;}
+.fs-detail{font-family:monospace;font-size:11px;color:var(--mid);line-height:1.8;background:var(--light);padding:5px 8px;border-radius:6px;margin-top:4px;}
+
+/* FOOTER */
+footer{text-align:center;padding:36px 20px;font-size:13px;color:var(--mid);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:all .5s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:440px){
+  .spots-grid,.shop-grid,.pack-grid{grid-template-columns:1fr;}
+}
+
+.modal-img{width:100%;height:180px;object-fit:cover;border-radius:14px;margin-bottom:14px;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-emoji">✈️🌴</span>
+  <h1 class="hero-title">Trip 2026</h1>
+  <p class="hero-sub">🇻🇳 ĐÀ NẴNG → 🇰🇷 SEOUL<br>2026.07.04 – 07.08</p>
+
+
+</section>
+
+<!-- MEMBERS -->
+<div class="members reveal">
+  <div class="sec-label">✨ メンバー ✨</div>
+  <div class="member-row">
+    <div class="member-card">
+      <span class="member-emoji">🌺</span>
+      <div class="member-name">さゆり</div>
+      <div class="member-role">ホーチミン発</div>
+    </div>
+    <div class="member-card">
+      <span class="member-emoji">🌸</span>
+      <div class="member-name">すー</div>
+      <div class="member-role">北海道発</div>
+    </div>
+    <div class="member-card">
+      <span class="member-emoji">🌼</span>
+      <div class="member-name">みさと</div>
+      <div class="member-role">北海道発</div>
+    </div>
+    <div class="member-card">
+      <span class="member-emoji">🌻</span>
+      <div class="member-name">あきほ</div>
+      <div class="member-role">東京発</div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#day0">7/4 出発</a>
+  <a href="#day1">7/5 ダナン</a>
+  <a href="#day2">7/6 ダナン→ソウルへ</a>
+  <a href="#day3">7/7 ソウル</a>
+  <a href="#day4">7/8 帰国</a>
+  <a href="#spots-danang">📍 ダナンスポット</a>
+  <a href="#spots-seoul">📍 ソウルスポット</a>
+  <a href="#packing">🧳 持ち物</a>
+  <a href="#nextrip">✨ 次回リスト</a>
+</nav>
+
+<!-- ===== 7/4 出発 ===== -->
+<div id="day0" class="country-header reveal">
+  <span class="country-flag">✈️</span>
+  <div class="country-name vn">出発日</div>
+  <div class="country-dates">2026年7月4日（土）</div>
+</div>
+<div class="day-section reveal">
+  <div class="day-header c-transit">
+    <span class="day-lbl">DAY 0</span>
+    <span class="day-ttl">🛫 それぞれ出発！</span>
+    <span class="day-dt">7/4</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item t-flight">
+      <div class="tl-time">07:05</div>
+      <div class="tl-box"><strong>✈️ さゆり出発</strong> ホーチミンT1 → ダナン
+        <div class="f-info">VJ628　HCM 07:05 → DAD 08:25<br>予約番号：3G9RAM</div>
+      </div>
+    </div>
+    <div class="tl-item t-flight">
+      <div class="tl-time">14:30</div>
+      <div class="tl-box"><strong>✈️ すー・みさと出発</strong> 新千歳 → 仁川 → ダナン
+        <div class="f-info">TW264　CTS 14:30 → ICN 17:40<br>TW013　ICN 21:35 → DAD 00:25(+1)<br>予約番号：X3GUN4</div>
+        <div class="tip">🍜 仁川T1トランジット中に黄生家カルグクス（3F搭乗エリア）がおすすめ！</div>
+      </div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">00:25頃</div>
+      <div class="tl-box"><strong>🏨 ダナン着 → Camellia Home チェックイン</strong>
+        <div class="tip">すぐ寝る！！</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7/5 ダナン Day1 ===== -->
+<div id="day1" class="country-header reveal">
+  <span class="country-flag">🇻🇳</span>
+  <div class="country-name vn">ĐÀ NẴNG</div>
+  <div class="country-dates">2026年7月5日（日）</div>
+</div>
+<div class="day-section reveal">
+  <div class="day-header c-danang">
+    <span class="day-lbl">DAY 1</span>
+    <span class="day-ttl">🌊 4人集合！ホイアンへ</span>
+    <span class="day-dt">7/5</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item t-flight">
+      <div class="tl-time">09:20</div>
+      <div class="tl-box"><strong>✈️ あきほ着</strong>（香港乗継）
+        <div class="f-info">UO629　東京 02:20 → HKG 06:00<br>UO552　HKG → DAD 09:20<br>予約番号：ICKRYN</div>
+        🚖 空港へみんなでお迎え！全員集合🎉
+      </div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">10:00</div>
+      <div class="tl-box"><strong>🍜 ミークアン！</strong>
+        <div class="tip">ダナン名物！幅広米麺に豚骨・海老の出汁を少量かけた汁なし和え麺。鶏肉がおすすめ。約300円。</div>
+      </div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">12:00</div>
+      <div class="tl-box"><strong>🏨 Wyndham Danang 早めチェックイン</strong>
+        <div class="alert">⚠️ チェックイン時に翌朝フローティングブレックファーストを予約！</div>
+      </div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">14:00</div>
+      <div class="tl-box"><strong>🫖 アフタヌーンティー</strong></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">15:00</div>
+      <div class="tl-box"><strong>🏊 プール・散歩</strong></div>
+    </div>
+    <div class="tl-item c-hoian">
+      <div class="tl-time">15:30</div>
+      <div class="tl-box"><strong>🚗 ホイアンへ出発！</strong>
+        <div class="tip">車で約40分。酔い止め持参！トイレ行ってから出発。</div>
+      </div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">17:00〜</div>
+      <div class="tl-box"><strong>🏮 ホイアン旧市街 食べ歩き＆散策</strong>
+        <div class="tip">バインミー・カムガー・カオラウ・チェー。可愛い雑貨もたくさん！小舟もおすすめ。</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">21:00</div>
+      <div class="tl-box"><strong>🐉 ドラゴン橋（行けたら）</strong>
+        <div class="tip">21:00に火を吹く！ホイアン20:00出発で間に合う。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7/6 ダナン Day2 ===== -->
+<div id="day2" class="country-header reveal">
+  <span class="country-flag">🇻🇳</span>
+  <div class="country-name vn">ĐÀ NẴNG → 仁川</div>
+  <div class="country-dates">2026年7月6日（月）</div>
+</div>
+<div class="day-section reveal">
+  <div class="day-header c-hoian">
+    <span class="day-lbl">DAY 2</span>
+    <span class="day-ttl">🍕 ビーチ・Pizza・夜は韓国へ！</span>
+    <span class="day-dt">7/6</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item t-food">
+      <div class="tl-time">06:00</div>
+      <div class="tl-box"><strong>🌅 フローティングブレックファースト</strong>
+        <div class="tip">プールで優雅な朝ごはん🥐（前日要予約！）</div>
+      </div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">07:00</div>
+      <div class="tl-box"><strong>🍳 朝食ビュッフェ</strong>（フォー・バインミーあり）</div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">09:00</div>
+      <div class="tl-box"><strong>🧳 Wyndham チェックアウト</strong></div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">10:00</div>
+      <div class="tl-box"><strong>🏨 荷物用ホテルへ移動</strong>
+        <div class="tip">1人約900円。シャワーOK・1Fにスパあり。Pizza4Psとお土産屋に近い！</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">11:00</div>
+      <div class="tl-box"><strong>🌊 海カフェでダラダラ</strong></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">12:00</div>
+      <div class="tl-box"><strong>⛪ ダナン大聖堂 ＋ ランチ</strong></div>
+    </div>
+    <div class="tl-item t-shop">
+      <div class="tl-time">13:00</div>
+      <div class="tl-box"><strong>🛍 お土産・お買い物</strong>
+        <div class="tip">ローカル市場もすぐ近くにあるよ</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">15:00〜</div>
+      <div class="tl-box"><strong>💆 スパ・ネイル or フリータイム</strong>
+        <div class="tip">荷物用ホテル1Fスパ：60分1,800円 / 120分3,000円<br>フットマッサージ・ヘッドスパ・4ハンドも！</div>
+      </div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">18:00</div>
+      <div class="tl-box"><strong>🍕 Pizza 4Ps！</strong>（予約済）
+        <div class="tip">日本人が立ち上げた超有名店。クラフトビール豊富。ホテルから徒歩5分。</div>
+      </div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">20:00</div>
+      <div class="tl-box"><strong>🧳 荷物ピックアップ → タクシーで空港へ</strong></div>
+    </div>
+    <div class="tl-item t-flight">
+      <div class="tl-time">23:30</div>
+      <div class="tl-box"><strong>✈️ 全員 ダナン → 仁川</strong>
+        <div class="f-info">VN430　DAD 23:30 → ICN 06:00(+1)<br>予約番号：E7KUOS</div>
+        <div class="alert">⚠️ 乗る前に韓国電子入国申請（K-ETA）を忘れずに！</div>
+      </div>
+    </div>
+    <div class="tl-item t-sleep">
+      <div class="tl-time">機内</div>
+      <div class="tl-box"><strong>💤 寝なきゃ死ぬ!!!</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7/7 ソウル ===== -->
+<div id="day3" class="country-header reveal">
+  <span class="country-flag">🇰🇷</span>
+  <div class="country-name kr">SEOUL</div>
+  <div class="country-dates">2026年7月7日（火）</div>
+</div>
+<div class="day-section reveal">
+  <div class="day-header c-seoul">
+    <span class="day-lbl">DAY 3</span>
+    <span class="day-ttl">🛍 明洞で爆買いデー！</span>
+    <span class="day-dt">7/7</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item t-flight">
+      <div class="tl-time">06:00</div>
+      <div class="tl-box"><strong>🛬 仁川空港T1 着</strong></div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">07:30</div>
+      <div class="tl-box"><strong>🍜 空港で朝ごはん</strong>
+        <div class="tip">黄生家カルグクス（T1 3F 搭乗エリア）がおすすめ！ミシュランビブグルマン。マンドゥも◎</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">09:00</div>
+      <div class="tl-box"><strong>🚌 6015番バス</strong> → 明洞駅前
+        <div class="tip">⚠️ 韓国はGoogle MapsよりNAVER Map が正確！</div>
+      </div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">10:30</div>
+      <div class="tl-box"><strong>🏨 L7明洞 荷物預け</strong>（3Fフロントデスク・チェックイン前でもOK）</div>
+    </div>
+    <div class="tl-item t-shop">
+      <div class="tl-time">11:00〜</div>
+      <div class="tl-box"><strong>🛍 明洞爆買いツアー！</strong></div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">お昼</div>
+      <div class="tl-box"><strong>🍧 ソルビン or 明洞屋台</strong></div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">15:00</div>
+      <div class="tl-box"><strong>🏨 チェックイン — L7 MYEONGDONG by LOTTE</strong>
+        <div class="f-info">ソウル特別市 中区 退渓路 137<br>1泊 14,033円/人（現地決済）<br>朝食：チェックイン時追加 約2,600円</div>
+      </div>
+    </div>
+    <div class="tl-item t-food">
+      <div class="tl-time">夜</div>
+      <div class="tl-box"><strong>🍗 夜ごはん</strong>
+        <div class="tip">外食 or ロッテ百貨店＋チキンストリートでテイクアウト → ホテルパーティー🎉</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7/8 帰国 ===== -->
+<div id="day4" class="country-header reveal">
+  <span class="country-flag">👋</span>
+  <div class="country-name" style="color:var(--lav)">またね〜！</div>
+  <div class="country-dates">2026年7月8日（水）</div>
+</div>
+<div class="day-section reveal">
+  <div class="day-header c-dep">
+    <span class="day-lbl">DAY 4</span>
+    <span class="day-ttl">🏠 それぞれ帰路へ</span>
+    <span class="day-dt">7/8</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item t-food">
+      <div class="tl-time">07:00</div>
+      <div class="tl-box"><strong>🥞 朝ごはん</strong>
+        <div class="tip">ホテルビュッフェ（要前日申込）or ホテル1F「A TWOSOME PLACE」（韓国スタバ的カフェ🎂）</div>
+      </div>
+    </div>
+    <div class="tl-item t-hotel">
+      <div class="tl-time">10:00</div>
+      <div class="tl-box"><strong>🧳 チェックアウト</strong> → リムジンバスで仁川へ</div>
+    </div>
+    <div class="tl-item t-flight">
+      <div class="tl-time">15:00</div>
+      <div class="tl-box"><strong>✈️ あきほ 仁川T1 → 成田</strong>
+        <div class="f-info">7C1107（チェジュ航空）ICN 15:00 → NRT 17:30<br>予約番号：M88Q7C</div>
+      </div>
+    </div>
+    <div class="tl-item t-flight">
+      <div class="tl-time">15:25</div>
+      <div class="tl-box"><strong>✈️ すー・みさと 仁川T2 → 新千歳</strong>
+        <div class="f-info">LJ303（ジンエアー）ICN 15:25 → CTS 18:10<br>予約番号：BK4B7P</div>
+      </div>
+    </div>
+    <div class="tl-item t-flight">
+      <div class="tl-time">21:15</div>
+      <div class="tl-box"><strong>✈️ さゆり 仁川T1 → ホーチミン</strong>
+        <div class="f-info">VJ861（ベトジェット）ICN 21:15 → HCM T2 00:30(+1)<br>予約番号：ZM82CS</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ダナン スポット詳細 ===== -->
+<div id="spots-danang" class="country-header reveal" style="padding-top:30px;">
+  <span style="font-size:32px;">📍</span>
+  <div class="country-name vn" style="font-size:24px;">ダナン・ホイアン スポット</div>
+</div>
+<div class="section-title reveal">タップすると詳細 ＋ Googleマップが開きます</div>
+<div class="spots-grid reveal">
+
+  <div class="spot-card" onclick="openModal('miquang')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##FFF3D0,#FFE4A0)';this.style.display='none'"><span class="card-emoji">🍜</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">ミークアン</div>
+      <div class="spot-card-desc">ダナン名物・汁なし和え麺。約300円。</div>
+      <a class="map-btn" href="https://maps.app.goo.gl/3oMRJdMPkQnwX2S97" target="_blank">🗺 地図を開く</a>
+    </div>
+  </div>
+
+  <div class="spot-card" onclick="openModal('wyndham')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##D0F0FF,#A0DCFF)';this.style.display='none'"><span class="card-emoji">🏨</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">Wyndham Da Nang</div>
+      <div class="spot-card-desc">メインホテル。プール・フローティングBF。</div>
+      <a class="map-btn" href="https://maps.app.goo.gl/Pj3EkFrXR3sH7dTq5" target="_blank">🗺 地図を開く</a>
+    </div>
+  </div>
+
+  <div class="spot-card" onclick="openModal('camellia')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##E8FFE8,#C0EEC0)';this.style.display='none'"><span class="card-emoji">🌸</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">Camellia Home</div>
+      <div class="spot-card-desc">7/4着・1泊目。空港近くの宿。</div>
+      <a class="map-btn" href="https://maps.app.goo.gl/Cs5s3LJvUHqp8h5o9" target="_blank">🗺 地図を開く</a>
+    </div>
+  </div>
+
+  <div class="spot-card" onclick="openModal('pizza4ps')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##FFE8D0,#FFCBA0)';this.style.display='none'"><span class="card-emoji">🍕</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">Pizza 4Ps</div>
+      <div class="spot-card-desc">予約済！日本人創業の超人気店。</div>
+      <a class="map-btn" href="https://maps.app.goo.gl/5SBNsf4GQJvFrxbH6" target="_blank">🗺 地図を開く</a>
+    </div>
+  </div>
+
+  <div class="spot-card" onclick="openModal('hoian')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##FFE8F8,#FFC8EC)';this.style.display='none'"><span class="card-emoji">🏮</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">ホイアン旧市街</div>
+      <div class="spot-card-desc">世界遺産の古都。ランタン＆食べ歩き。</div>
+      <a class="map-btn" href="https://maps.app.goo.gl/ZPvzS2gQz1RW4ADi9" target="_blank">🗺 地図を開く</a>
+    </div>
+  </div>
+
+  <div class="spot-card" onclick="openModal('dragon')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##FFD8C0,#FFA880)';this.style.display='none'"><span class="card-emoji">🐉</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">ドラゴン橋</div>
+      <div class="spot-card-desc">毎週末21:00 火を吹くよ！</div>
+      <a class="map-btn" href="https://maps.app.goo.gl/nHwCnb3DpRm1Ybwi7" target="_blank">🗺 地図を開く</a>
+    </div>
+  </div>
+
+  <div class="spot-card" onclick="openModal('cathedral')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1554797589-7241bb691973?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##D8D8FF,#B8B0F0)';this.style.display='none'"><span class="card-emoji">⛪</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">ダナン大聖堂</div>
+      <div class="spot-card-desc">ピンクの可愛い教会。フォトスポット！</div>
+      <a class="map-btn" href="https://maps.app.goo.gl/QcPV9CyvB7xweSX36" target="_blank">🗺 地図を開く</a>
+    </div>
+  </div>
+
+  <div class="spot-card" onclick="openModal('spa')">
+    <div class="spot-card-top"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.parentElement.style.background='linear-gradient(135deg,##E8F8E8,#C0ECD0)';this.style.display='none'"><span class="card-emoji">💆</span></div>
+    <div class="spot-card-body">
+      <div class="spot-card-name">スパ・ネイル</div>
+      <div class="spot-card-desc">荷物用ホテル1F。60分1,800円〜</div>
+      <a class="map-btn" href="https://www.google.com/maps/search/spa+danang" target="_blank">🗺 エリアを見る</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== ソウル スポット詳細 ===== -->
+<div id="spots-seoul" class="country-header reveal" style="padding-top:20px;">
+  <span style="font-size:32px;">📍</span>
+  <div class="country-name kr" style="font-size:24px;">ソウル・明洞 スポット</div>
+</div>
+<div class="section-title reveal">タップすると詳細 ＋ NAVERマップが開きます</div>
+<div class="shop-grid reveal">
+
+  <div class="shop-card" onclick="openModal('l7hotel')">
+    <div class="shop-top"><span class="shop-emoji">🏨</span><div class="shop-name">L7 MYEONGDONG by LOTTE</div></div>
+    <div class="shop-desc">明洞駅すぐ。1FにA TWOSOME PLACE。朝食は要申込。</div>
+    <a class="shop-map-btn" href="https://naver.me/xhLxKuMH" target="_blank">🗺 NAVERで開く</a>
+  </div>
+
+  <div class="shop-card" onclick="openModal('daiso')">
+    <div class="shop-top"><span class="shop-emoji">🔴</span><div class="shop-name">ダイソー 明洞駅店</div></div>
+    <div class="shop-desc">12階建て超巨大ダイソー。お名前シール機あり（1F・3Fあたり）。</div>
+    <a class="shop-map-btn" href="https://naver.me/xFTgipRt" target="_blank">🗺 NAVERで開く</a>
+  </div>
+
+  <div class="shop-card" onclick="openModal('mimiline')">
+    <div class="shop-top"><span class="shop-emoji">✨</span><div class="shop-name">MIMILINE 明洞店</div></div>
+    <div class="shop-desc">アクセ・キーホルダー・韓国雑貨。おそろいキーホルダー◎</div>
+    <a class="shop-map-btn" href="https://naver.me/GkpFbqlh" target="_blank">🗺 NAVERで開く</a>
+  </div>
+
+  <div class="shop-card" onclick="openModal('oliveyoung')">
+    <div class="shop-top"><span class="shop-emoji">🌿</span><div class="shop-name">OLIVE YOUNG 明洞本店</div></div>
+    <div class="shop-desc">韓国コスメ天国！ホテル徒歩5分。</div>
+    <a class="shop-map-btn" href="https://naver.me/GfDrXqWM" target="_blank">🗺 NAVERで開く</a>
+  </div>
+
+  <div class="shop-card" onclick="openModal('sulbing')">
+    <div class="shop-top"><span class="shop-emoji">🍧</span><div class="shop-name">Sulbing（ソルビン）</div></div>
+    <div class="shop-desc">ピンスの有名チェーン。ホテル徒歩5分。</div>
+    <a class="shop-map-btn" href="https://naver.me/5rrXpfzN" target="_blank">🗺 NAVERで開く</a>
+  </div>
+
+  <div class="shop-card" onclick="openModal('lotte')">
+    <div class="shop-top"><span class="shop-emoji">🏬</span><div class="shop-name">ロッテ百貨店 明洞本店</div></div>
+    <div class="shop-desc">デパ地下にお惣菜・フードホール・お土産菓子。徒歩10分。</div>
+    <a class="shop-map-btn" href="https://naver.me/xk3XVnTq" target="_blank">🗺 NAVERで開く</a>
+  </div>
+
+  <div class="shop-card" onclick="openModal('nyunyu')">
+    <div class="shop-top"><span class="shop-emoji">👗</span><div class="shop-name">nyunyu 明洞</div></div>
+    <div class="shop-desc">ファッション・食器・インテリア。徒歩6分。（すーが気になってる！）</div>
+    <a class="shop-map-btn" href="https://www.google.com/maps/search/nyunyu+myeongdong" target="_blank">🗺 マップで開く</a>
+  </div>
+
+  <div class="shop-card" onclick="openModal('hwangsaeng')">
+    <div class="shop-top"><span class="shop-emoji">🍜</span><div class="shop-name">黄生家カルグクス（仁川）</div></div>
+    <div class="shop-desc">ミシュランビブグルマン。T1-3F搭乗エリア / T2-B1F。マンドゥも◎</div>
+    <a class="shop-map-btn" href="https://maps.app.goo.gl/nhWmKJJkm8kbv5LA8" target="_blank">🗺 マップで開く</a>
+  </div>
+
+</div>
+
+<!-- ===== 持ち物リスト ===== -->
+<div id="packing" class="packing-section reveal">
+  <div class="packing-title">🧳 Packing List</div>
+  <div class="pack-grid">
+    <div>
+      <div class="pack-group-ttl">💳 貴重品</div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>パスポート</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>航空券（スマホ or 印刷）</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>現金・クレジットカード</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>クレカ（スマホタッチ登録推奨）</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>保険（クレカ条件再確認）</span></div>
+      <div class="pack-group-ttl" style="margin-top:12px">🪥 日用品</div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>歯ブラシセット</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>マスク</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>ポケットティッシュ</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>ウェットティッシュ</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>コンタクトレンズ</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>化粧品類</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>常備薬・酔い止め・胃腸薬</span></div>
+    </div>
+    <div>
+      <div class="pack-group-ttl">👗 衣類</div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>トップス</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>ボトムス</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>インナー</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>アウター</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>下着</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>靴下</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>パジャマ</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>帽子</span></div>
+      <div class="pack-group-ttl" style="margin-top:12px">🎒 その他</div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>折りたたみ傘</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>お菓子類</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>日焼け止め</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>スマホ充電器</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>モバイルバッテリー</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><span>電源変換アダプター</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 次回リスト ===== -->
+<div id="nextrip" class="next-trip reveal">
+  <div class="next-title">✨ 次回韓国でやりたいこと</div>
+  <div class="wish-item"><span class="wish-icon">🍵</span><div><strong>仁寺洞のOSULLOC</strong>（お茶屋さん）<br><small style="color:var(--mid)">明洞からタクシー約10分</small></div></div>
+  <div class="wish-item"><span class="wish-icon">🍧</span><div><strong>仁寺洞でパッピンス</strong><br><small style="color:var(--mid)">明洞からタクシー約10分</small></div></div>
+  <div class="wish-item"><span class="wish-icon">🏯</span><div><strong>光化門のOLIVE YOUNG本店</strong><br><small style="color:var(--mid)">仁寺洞からお散歩10分。景福宮（チャングムの舞台）の南門エリア</small></div></div>
+  <div class="wish-item"><span class="wish-icon">🛒</span><div><strong>ロッテマート ZETTAPLEX ソウル駅店</strong><br><small style="color:var(--mid)">明洞から2駅・約15分。最後タクシーで行くのがおすすめ</small></div></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="font-size:36px;margin-bottom:10px">🌴✈️🇻🇳🇰🇷</div>
+  <div style="font-weight:700;font-size:16px;color:var(--coral);margin-bottom:6px">最高の旅になりますように🎉</div>
+  <div>さゆり・すー・みさと・あきほ ♥ 2026.07.04–08</div>
+</footer>
+
+<!-- ===== MODALS ===== -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalBox">
+    <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    <div class="modal-handle"></div>
+    <div class="modal-icon" id="mIcon"></div>
+    <div class="modal-title" id="mTitle"></div>
+    <div class="modal-cat" id="mCat"></div>
+    <div class="modal-divider"></div>
+    <div class="modal-body" id="mBody"></div>
+    <a class="modal-map-btn" id="mMapBtn" href="#" target="_blank">🗺 地図で開く</a>
+  </div>
+</div>
+
+<script>
+const spots = {
+  miquang:{icon:'🍜',title:'ミークアン（Mì Quảng）',cat:'🇻🇳 ダナン名物グルメ',body:`<div class="info-row"><span class="info-row-icon">📝</span><div class="info-row-text">きしめんのような幅広の米麺に、豚骨・海老の濃厚な出汁を少量かけ、ピーナッツ、ハーブ、ライスクッキーをトッピングして混ぜて食べる「汁なし和え麺」。</div></div><div class="info-row"><span class="info-row-icon">🍗</span><div class="info-row-text"><strong>このお店は鶏肉のミークアンがおすすめ！</strong>美味しいジュースもあるよ。</div></div><div class="info-row"><span class="info-row-icon">💰</span><div class="info-row-text">約300円（ローカル価格）</div></div><div class="info-row"><span class="info-row-icon">✅</span><div class="info-row-text">食材管理安心なローカルレストラン</div></div>`,map:'https://maps.app.goo.gl/3oMRJdMPkQnwX2S97'},
+  wyndham:{icon:'🏨',title:'Wyndham Danang Golden Bay Hotel',cat:'🇻🇳 メインホテル（7/5〜7/6）',body:`<div class="info-row"><span class="info-row-icon">📍</span><div class="info-row-text">ダナン市街中心部。ビーチ近く。</div></div><div class="info-row"><span class="info-row-icon">🌅</span><div class="info-row-text"><strong>フローティングブレックファースト</strong>：チェックイン時に翌朝分を予約！プールで食べる優雅な朝ごはん🥐🥣</div></div><div class="info-row"><span class="info-row-icon">🏊</span><div class="info-row-text">プール・コンビニ的な軽食Bar・ルームサービスあり</div></div><div class="info-row"><span class="info-row-icon">⏰</span><div class="info-row-text">早めに行けばチェックイン前でも中に入れてくれる可能性あり</div></div>`,map:'https://maps.app.goo.gl/Pj3EkFrXR3sH7dTq5'},
+  camellia:{icon:'🌸',title:'Camellia Home Da Nẵng',cat:'🇻🇳 1泊目ホテル（7/4着）',body:`<div class="info-row"><span class="info-row-icon">📍</span><div class="info-row-text">ダナン空港から比較的近い宿。</div></div><div class="info-row"><span class="info-row-icon">💤</span><div class="info-row-text">着いたら即寝る！すー・みさとは深夜着、さゆりは早朝着。</div></div>`,map:'https://maps.app.goo.gl/Cs5s3LJvUHqp8h5o9'},
+  pizza4ps:{icon:'🍕',title:'Pizza 4Ps ダナン',cat:'🇻🇳 夜ごはん（7/6 18:00 予約済！）',body:`<div class="info-row"><span class="info-row-icon">🇯🇵</span><div class="info-row-text">日本人が立ち上げた有名ピザ屋。毎日行列ができる超人気店。</div></div><div class="info-row"><span class="info-row-icon">🍕</span><div class="info-row-text">とにかくピザが美味しい！クラフトビールも豊富。</div></div><div class="info-row"><span class="info-row-icon">✅</span><div class="info-row-text"><strong>GoogleMapで予約済み！</strong>荷物用ホテルから徒歩5分。</div></div>`,map:'https://maps.app.goo.gl/5SBNsf4GQJvFrxbH6'},
+  hoian:{icon:'🏮',title:'ホイアン旧市街',cat:'🇻🇳 世界遺産の古都（7/5 夕方〜）',body:`<div class="info-row"><span class="info-row-icon">🚗</span><div class="info-row-text">ダナンから車で約40分。<strong>酔い止め持参推奨！</strong>出発前にトイレを。</div></div><div class="info-row"><span class="info-row-icon">🍽</span><div class="info-row-text">食べ歩きグルメ：バインミー・カムガー・カオラウ・チェー</div></div><div class="info-row"><span class="info-row-icon">🛍</span><div class="info-row-text">可愛い雑貨がたくさん！結構広いのでめちゃ歩く。疲れたらカフェか小舟で休憩。</div></div><div class="info-row"><span class="info-row-icon">🐉</span><div class="info-row-text">20:00頃ホイアンを出るとドラゴン橋（21:00 火吹き）に間に合う！</div></div>`,map:'https://maps.app.goo.gl/ZPvzS2gQz1RW4ADi9'},
+  dragon:{icon:'🐉',title:'ドラゴン橋（Cầu Rồng）',cat:'🇻🇳 ダナンの名物スポット',body:`<div class="info-row"><span class="info-row-icon">🔥</span><div class="info-row-text">毎週土・日曜日の21:00に橋が火（と水）を吹く！ダナン名物のショー。</div></div><div class="info-row"><span class="info-row-icon">⏰</span><div class="info-row-text">ホイアンを20:00頃に出発できれば間に合う。</div></div>`,map:'https://maps.app.goo.gl/nHwCnb3DpRm1Ybwi7'},
+  cathedral:{icon:'⛪',title:'ダナン大聖堂',cat:'🇻🇳 観光スポット（7/6 午前）',body:`<div class="info-row"><span class="info-row-icon">📸</span><div class="info-row-text">ピンク色の可愛い教会で、フォトスポットとして人気。</div></div><div class="info-row"><span class="info-row-icon">📍</span><div class="info-row-text">荷物用ホテル・Pizza 4Psとも近い立地。午後の観光ついでに寄れる！</div></div>`,map:'https://maps.app.goo.gl/QcPV9CyvB7xweSX36'},
+  spa:{icon:'💆',title:'スパ・ネイル（ダナン）',cat:'🇻🇳 荷物用ホテル1F（7/6 午後）',body:`<div class="info-row"><span class="info-row-icon">💰</span><div class="info-row-text">60分 約1,800円 / 120分 約3,000円</div></div><div class="info-row"><span class="info-row-icon">✋</span><div class="info-row-text">フットマッサージ・ヘッドスパ・耳かき・4ハンドマッサージ・ホットストーンも。</div></div><div class="info-row"><span class="info-row-icon">💅</span><div class="info-row-text">ネイルも安い！</div></div><div class="info-row"><span class="info-row-icon">🚿</span><div class="info-row-text">マッサージ後は部屋でシャワー or シャワー付きスパへ。</div></div>`,map:'https://www.google.com/maps/search/spa+da+nang'},
+  l7hotel:{icon:'🏨',title:'L7 MYEONGDONG by LOTTE',cat:'🇰🇷 ソウル・明洞ホテル（7/7〜7/8）',body:`<div class="info-row"><span class="info-row-icon">📍</span><div class="info-row-text">ソウル特別市 中区 退渓路 137<br>地下鉄4号線 明洞駅すぐ</div></div><div class="info-row"><span class="info-row-icon">💰</span><div class="info-row-text">1泊14,033円/人（現地決済）</div></div><div class="info-row"><span class="info-row-icon">🥞</span><div class="info-row-text">朝食ビュッフェはチェックイン時に要申込（約2,600円追加）</div></div><div class="info-row"><span class="info-row-icon">☕</span><div class="info-row-text">1FにA TWOSOME PLACE（韓国スタバ的カフェ、ケーキが可愛い！）</div></div><div class="info-row"><span class="info-row-icon">🧳</span><div class="info-row-text">チェックイン前の荷物預けは3Fフロントデスクへ（確認済）</div></div>`,map:'https://naver.me/xhLxKuMH'},
+  daiso:{icon:'🔴',title:'ダイソー 明洞駅店',cat:'🇰🇷 明洞ショッピング',body:`<div class="info-row"><span class="info-row-icon">📍</span><div class="info-row-text">明洞駅1番出口すぐ</div></div><div class="info-row"><span class="info-row-icon">🏢</span><div class="info-row-text">12階建ての超巨大ダイソービル！</div></div><div class="info-row"><span class="info-row-icon">🏷</span><div class="info-row-text">お名前シール機は1F・3Fあたり（要確認）</div></div>`,map:'https://naver.me/xFTgipRt'},
+  mimiline:{icon:'✨',title:'MIMILINE 明洞店',cat:'🇰🇷 明洞ショッピング',body:`<div class="info-row"><span class="info-row-icon">📍</span><div class="info-row-text">明洞駅すぐ</div></div><div class="info-row"><span class="info-row-icon">🛍</span><div class="info-row-text">アクセ・キーホルダー・韓国雑貨</div></div><div class="info-row"><span class="info-row-icon">💝</span><div class="info-row-text">みんなでおそろいキーホルダーを作っても◎</div></div>`,map:'https://naver.me/GkpFbqlh'},
+  oliveyoung:{icon:'🌿',title:'OLIVE YOUNG 明洞本店',cat:'🇰🇷 明洞ショッピング（ホテル徒歩5分）',body:`<div class="info-row"><span class="info-row-icon">💄</span><div class="info-row-text">韓国コスメの聖地！スキンケア・メイク・ボディケアが充実。</div></div><div class="info-row"><span class="info-row-icon">🏬</span><div class="info-row-text">国内2番目の広さを誇る大型店舗。</div></div>`,map:'https://naver.me/GfDrXqWM'},
+  sulbing:{icon:'🍧',title:'Sulbing（ソルビン）明洞1号店',cat:'🇰🇷 明洞スイーツ（ホテル徒歩5分）',body:`<div class="info-row"><span class="info-row-icon">❄️</span><div class="info-row-text">韓国ピンス（かき氷）の超有名チェーン。ふわふわの氷が絶品！</div></div><div class="info-row"><span class="info-row-icon">📸</span><div class="info-row-text">インスタ映えするビジュアルも魅力。お昼やおやつにぴったり。</div></div>`,map:'https://naver.me/5rrXpfzN'},
+  lotte:{icon:'🏬',title:'ロッテ百貨店 明洞本店',cat:'🇰🇷 明洞ショッピング（ホテル徒歩10分）',body:`<div class="info-row"><span class="info-row-icon">🥘</span><div class="info-row-text">デパ地下にお惣菜・フードホール！ホテルでパーティーする食材調達に◎</div></div><div class="info-row"><span class="info-row-icon">🎁</span><div class="info-row-text">ちゃんとしたお土産菓子もここで揃う。</div></div>`,map:'https://naver.me/xk3XVnTq'},
+  nyunyu:{icon:'👗',title:'nyunyu 明洞',cat:'🇰🇷 明洞ショッピング（ホテル徒歩6分）',body:`<div class="info-row"><span class="info-row-icon">👚</span><div class="info-row-text">MIMILINEよりファッション寄り。洋服系が充実。</div></div><div class="info-row"><span class="info-row-icon">🏠</span><div class="info-row-text">食器とインテリアもあり。すーがちょっと覗きたいとのこと！</div></div>`,map:'https://www.google.com/maps/search/nyunyu+myeongdong'},
+  hwangsaeng:{icon:'🍜',title:'黄生家カルグクス（仁川空港）',cat:'🇰🇷 仁川空港グルメ',body:`<div class="info-row"><span class="info-row-icon">⭐</span><div class="info-row-text"><strong>ミシュランビブグルマン</strong>獲得の名店！</div></div><div class="info-row"><span class="info-row-icon">🍲</span><div class="info-row-text">優しめの白いスープ（牛骨）。マンドゥ（餃子）もおすすめ。</div></div><div class="info-row"><span class="info-row-icon">📍</span><div class="info-row-text">T1 → 3F搭乗エリア<br>T2 → B1F一般エリア<br>どちらにもある！</div></div><div class="info-row"><span class="info-row-icon">⚠️</span><div class="info-row-text">牛骨スープが苦手な人は注意。</div></div>`,map:'https://maps.app.goo.gl/nhWmKJJkm8kbv5LA8'},
+};
+
+const spotImgs={"miquang": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80&auto=format&fit=crop", "wyndham": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700&q=80&auto=format&fit=crop", "camellia": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=700&q=80&auto=format&fit=crop", "pizza4ps": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&q=80&auto=format&fit=crop", "hoian": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=700&q=80&auto=format&fit=crop", "dragon": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=700&q=80&auto=format&fit=crop", "cathedral": "https://images.unsplash.com/photo-1554797589-7241bb691973?w=700&q=80&auto=format&fit=crop", "spa": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=700&q=80&auto=format&fit=crop", "l7hotel": "https://images.unsplash.com/photo-1551882547-ff40c4fe1fa7?w=700&q=80&auto=format&fit=crop", "daiso": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=700&q=80&auto=format&fit=crop", "mimiline": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700&q=80&auto=format&fit=crop", "oliveyoung": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=700&q=80&auto=format&fit=crop", "sulbing": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=700&q=80&auto=format&fit=crop", "lotte": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=700&q=80&auto=format&fit=crop", "nyunyu": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=700&q=80&auto=format&fit=crop", "hwangsaeng": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=700&q=80&auto=format&fit=crop"};
+function openModal(key){
+  const s=spots[key];
+  if(!s)return;
+  document.getElementById('mIcon').textContent=s.icon;
+  document.getElementById('mTitle').textContent=s.title;
+  document.getElementById('mCat').textContent=s.cat;
+  const imgUrl=spotImgs[key];
+  const imgHtml=imgUrl?`<img class="modal-img" src="${imgUrl}" alt="" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous">`:'';
+  document.getElementById('mBody').innerHTML=imgHtml+s.body;
+  document.getElementById('mMapBtn').href=s.map;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModalBtn(){
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeModal(e){
+  if(e.target===document.getElementById('modalOverlay'))closeModalBtn();
+}
+function togglePack(el){
+  el.classList.toggle('checked');
+  el.querySelector('.pack-check').textContent=el.classList.contains('checked')?'✓':'';
+}
+// Scroll reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>
